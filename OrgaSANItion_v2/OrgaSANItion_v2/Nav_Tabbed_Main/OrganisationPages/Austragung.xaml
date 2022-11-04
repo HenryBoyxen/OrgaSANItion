@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OrgaSANItion_v2.Nav_Tabbed_Main.OrganisationPages.Austragung"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="25,35">
+                <StackLayout.Resources>
+                    <ResourceDictionary>
+                        <Style TargetType="Label">
+                            <Setter Property="FontSize" Value="18"/>
+                        </Style>
+                    </ResourceDictionary>
+                </StackLayout.Resources>
+                <Label Text="Austragung aus Dienstplan"
+                       VerticalOptions="Start"
+                       HorizontalTextAlignment="Center"
+                       FontSize="40"/>
+                <!--Display dein nächster Dienst-->
+                <Label Text="Dein nächster Dienst:"
+                       Margin="0,20,0,0"/>
+                <Label x:Name="txt_block_nächsterdienst"
+                       BackgroundColor="LightGray"/>
+                <BoxView Style="{StaticResource Separator}"
+                         Margin="0,20,0,0"/>
+                <!--Für den nächsten Dienst austragen-->
+                <Label Text="Für den nächsten Dienst austragen:"
+                       Margin="0,20,0,0"/>
+                <Entry BackgroundColor="LightGray"
+                       Placeholder="Begründung"/>
+                <Button Text="Austragen"
+                        x:Name="btn_austragen_nächsterdienst"
+                        Clicked="btn_austragen_nächsterdienst_Clicked"
+                        Margin="0,15,0,0"/>
+                <BoxView Style="{StaticResource Separator}"
+                         Margin="0,20,0,0"/>
+                <!--Längerfristig austragen-->
+                <Label Text="Längerfristig austragen:"
+                       Margin="0,20,0,0"/>
+                <Entry BackgroundColor="LightGray"
+                       Placeholder="Begründung"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Von:"
+                           VerticalOptions="Center"
+                           Grid.Column="0"/>
+                    <DatePicker x:Name="datepicker_von"
+                                HorizontalOptions="Center"
+                                Grid.Column="1"/>
+                    <Label Text="Bis:"
+                           VerticalOptions="Center"
+                           Grid.Column="2"/>
+                    <DatePicker x:Name="datepicker_bis"
+                                HorizontalOptions="Center"
+                                Grid.Column="3"/>
+                </Grid>
+                <Button Text="Austragen"
+                        x:Name="btn_austragen_längerfristig"
+                        Clicked="btn_austragen_längerfristig_Clicked"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

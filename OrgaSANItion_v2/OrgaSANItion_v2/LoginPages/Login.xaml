@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OrgaSANItion_v2.LoginPages.Login"
+             BackgroundColor="white"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Margin="25,35">
+            <Label Text="Anmelden"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                FontSize="40"/>
+            <!--Erklärung-->
+            <Label Text="Melde dich jetzt mit &#x0a; deinen Accountdaten an"
+                   HorizontalTextAlignment="Center"
+                   FontSize="18"
+                   Margin="0,30,0,0"
+                   x:Name="txtblock_feedback"/>
+            <!--Entry Username-->
+            <Entry x:Name="entry_username"
+                   Placeholder="Benutzername"
+                   FontSize="18"
+                   BackgroundColor="LightGray"
+                   Margin="0,30,0,0"/>
+            <!--Entry Password-->
+            <Entry x:Name="entry_password"
+                   Placeholder="Passwort"
+                   IsPassword="True"
+                   FontSize="18"
+                   BackgroundColor="LightGray"
+                   Margin="0,20,0,0"/>
+            <!--Anmeldedaten merken, noch nicht implementiert
+            <StackLayout Orientation="Horizontal" Margin="0,30,0,0">
+                <CheckBox x:Name="checkbox_anmeldedatenmerken"/>
+                <Label Text="Anmeldedaten merken"
+                       FontSize="18"/>
+            </StackLayout>
+            -->
+            <!--Button Anmelden-->
+            <Button Text="Anmelden"
+                    FontSize="18"
+                    Margin="0,30,0,0"
+                    x:Name="btn_anmelden"
+                    Clicked="btn_anmelden_Clicked"/>
+            <BoxView Style="{StaticResource Separator}"
+                         Margin="0,30,0,0"/>
+            <!--Registrieren/Passwort zurücksetzen-->
+            <Grid Margin="0,40,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <!--Button Registrieren-->
+                <Label Text="Kein Konto?"
+                       FontSize="18"
+                       VerticalOptions="Center"/>
+                <Button Text="Registrieren"
+                        Grid.Column="1"
+                        Margin="20,0,0,0"
+                        x:Name="btn_registrieren"
+                        Clicked="btn_registrieren_Clicked"/>
+                <!--Button Passwort zurücksetzen-->
+                <Label Text="Passwort &#x0a; vergessen?"
+                       HorizontalTextAlignment="Center"
+                       Grid.Row="1"
+                       FontSize="18"
+                       VerticalOptions="Center"/>
+                <Button Text="Passwort zurücksetzen"
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Margin="20,0,0,0"
+                        x:Name="btn_passwortzurücksetzen"
+                        Clicked="btn_passwortzurücksetzen_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

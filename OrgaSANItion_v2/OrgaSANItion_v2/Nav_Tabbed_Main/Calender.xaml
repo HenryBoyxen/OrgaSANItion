@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OrgaSANItion_v2.Nav_Tabbed_Main.Calender"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Margin="25,35">
+            <Label Text="Kalender"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                FontSize="40"/>
+            <!--Navigation Date-->
+            <Label Text="Wähle das Datum aus:"
+                   FontSize="18"
+                   HorizontalOptions="Center"
+                   Margin="0,30,0,0"/>
+            <DatePicker x:Name="datepicker"
+                        HorizontalOptions="CenterAndExpand"/>
+            <!--Display Sanis-->
+            <Label Text="Sanis:"
+                   FontSize="20"
+                   Margin="0,10,0,0"/>
+            <Label x:Name="txt_block_sani1"
+                   FontSize="18"
+                   Background="lightgray"
+                   Margin="0,10,0,0"
+                   Padding="5"/>
+            <Label x:Name="txt_block_sani2"
+                   FontSize="18"
+                   Background="lightgray"
+                   Margin="0,10,0,0"
+                   Padding="5"/>
+            <!--Springer, die heute Dienst haben-->
+            <Label Text="Springer:"
+                   FontSize="20"
+                   Margin="0,25,0,0"/>
+            <Label x:Name="txt_block_springer1"
+                   FontSize="18"
+                   Background="lightgray"
+                   Margin="0,10,0,0"
+                   Padding="5"/>
+            <Label x:Name="txt_block_springer2"
+                   FontSize="18"
+                   Background="lightgray"
+                   Margin="0,10,0,0"
+                   Padding="5"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
