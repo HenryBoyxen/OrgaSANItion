@@ -16,5 +16,10 @@ namespace OrgaSANItion_v2.Nav_Tabbed_Main
         {
             InitializeComponent();
         }
+
+        private async void btn_diensteanzeigen_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AllDuties());
+        }
     }
 }

@@ -3172,20 +3172,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Henry\\.nuget\\packages\\": {}
+    "C:\\Users\\boyxe\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Henry\\Documents\\Programmieren\\MobileApp\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.Android\\OrgaSANItion_v2.Android.csproj",
+      "projectUniqueName": "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.Android\\OrgaSANItion_v2.Android.csproj",
       "projectName": "OrgaSANItion_v2.Android",
-      "projectPath": "C:\\Users\\Henry\\Documents\\Programmieren\\MobileApp\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.Android\\OrgaSANItion_v2.Android.csproj",
-      "packagesPath": "C:\\Users\\Henry\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Henry\\Documents\\Programmieren\\MobileApp\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.Android\\obj\\",
+      "projectPath": "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.Android\\OrgaSANItion_v2.Android.csproj",
+      "packagesPath": "C:\\Users\\boyxe\\.nuget\\packages\\",
+      "outputPath": "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\Henry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\boyxe\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3198,8 +3198,8 @@
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "C:\\Users\\Henry\\Documents\\Programmieren\\MobileApp\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj": {
-              "projectPath": "C:\\Users\\Henry\\Documents\\Programmieren\\MobileApp\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj"
+            "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj": {
+              "projectPath": "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj"
             }
           }
         }

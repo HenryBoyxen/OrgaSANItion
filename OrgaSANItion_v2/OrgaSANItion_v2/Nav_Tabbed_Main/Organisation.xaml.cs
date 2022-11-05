@@ -20,19 +20,16 @@ namespace OrgaSANItion_v2.Nav_Tabbed_Main
 
         private async void btn_eintragung_Clicked(object sender, EventArgs e)
         {
-            Eintragung eintragung = new Eintragung();
             await Navigation.PushAsync(new Eintragung());
         }
 
         private async void btn_austragung_Clicked(object sender, EventArgs e)
         {
-            Austragung austragung = new Austragung();
             await Navigation.PushAsync(new Austragung());
         }
 
         private async void btn_eventplanung_Clicked(object sender, EventArgs e)
         {
-            Eventplanung eventplanung = new Eventplanung();
             await Navigation.PushAsync(new Eventplanung()); 
         }
     }

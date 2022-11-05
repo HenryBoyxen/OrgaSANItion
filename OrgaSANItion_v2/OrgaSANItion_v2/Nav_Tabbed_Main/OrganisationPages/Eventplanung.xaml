@@ -1,13 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="OrgaSANItion_v2.Nav_Tabbed_Main.OrganisationPages.Eventplanung">
+             x:Class="OrgaSANItion_v2.Nav_Tabbed_Main.OrganisationPages.Eventplanung"
+             BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Hier finden Bauarbeiten statt!"
-                   FontSize="22"
-                   VerticalOptions="CenterAndExpand" 
-                   HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout x:Name="stacklayout_main" Margin="25,35">
+                <Label Text="Eventplanung"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="CenterAndExpand"
+                    FontSize="40"
+                       Margin="0,0,0,40"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
