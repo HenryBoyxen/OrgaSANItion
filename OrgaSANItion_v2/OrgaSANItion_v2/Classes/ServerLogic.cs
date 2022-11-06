@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using System.Net.Sockets;
 using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace OrgaSANItion_v2.Classes
 {
     public static class ServerLogic
     {
-        static string Hostname = "192.168.178.38";
+        static string Hostname = "192.168.178.42";
         static int Port = 32332;
 
         public static string ReadStreamString(NetworkStream stream)
@@ -65,6 +67,67 @@ namespace OrgaSANItion_v2.Classes
             }
 
             return sqlPassword;
+        }
+
+        public static string[] HomePage_initializeTextblocks()
+        {
+            string[] array = new string[4];
+
+            try
+            {
+                using (TcpClient tcpClient = new TcpClient(Hostname, Port))
+                {
+                    NetworkStream stream = tcpClient.GetStream();
+                    StreamReader sr = new StreamReader(stream);
+                    StreamWriter sw = new StreamWriter(stream);
+                    sw.AutoFlush = true;
+
+                    //Send request
+                    sw.Write("HomePage_initializeTextblocks");
+
+                    //Get answer
+                    IFormatter formatter = new BinaryFormatter();
+                    array = (string[])formatter.Deserialize(stream);
+                }
+            }
+            catch
+            {
+                return null;
+            }
+
+            return array;
+        }
+
+        public static string Homepage_initializeNextDuty()
+        {
+            string date;
+            try
+            {
+                using (TcpClient tcpClient = new TcpClient(Hostname, Port))
+                {
+                    NetworkStream stream = tcpClient.GetStream();
+                    StreamReader sr = new StreamReader(stream);
+                    StreamWriter sw = new StreamWriter(stream);
+                    sw.AutoFlush = true;
+
+                    //Send request
+                    sw.Write("HomePage_initializeNextDuty");
+
+                    //Wait for server to be ready
+                    ReadStreamString(stream);
+
+                    //Send username
+                    sw.Write(Variables.GetUsername());
+
+                    //Get answer
+                    date = ReadStreamString(stream);
+                }
+            }
+            catch
+            {
+                return null;
+            }
+            return date;
         }
     }
 }

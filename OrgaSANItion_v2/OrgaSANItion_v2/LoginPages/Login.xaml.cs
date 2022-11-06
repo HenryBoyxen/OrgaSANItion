@@ -20,12 +20,6 @@ namespace OrgaSANItion_v2.LoginPages
 
         private async void btn_anmelden_Clicked(object sender, EventArgs e)
         {
-            //Skip Login
-            Nav_Tabbed nav_Tabbed = new Nav_Tabbed();
-            await Navigation.PushAsync(nav_Tabbed);
-            return;
-
-
             //Return if username or password is null
             if (entry_username.Text == null || entry_password.Text == null)
             {
@@ -61,10 +55,9 @@ namespace OrgaSANItion_v2.LoginPages
                 txtblock_feedback.Text = "Das Passwort ist falsch";
                 return;
             }
-
-
-            //Nav_Tabbed nav_Tabbed = new Nav_Tabbed();
-            //await Navigation.PushAsync(nav_Tabbed);
+            Variables.SetUsername(entry_username.Text);
+            Nav_Tabbed nav_Tabbed = new Nav_Tabbed();
+            await Navigation.PushAsync(nav_Tabbed);
         }
 
         private async void btn_registrieren_Clicked(object sender, EventArgs e)

@@ -49,9 +49,10 @@
                    Margin="0,30,0,0"
                    FontSize="20"/>
                 <Label x:Name="txt_block_nächsterdienst"
-                   FontSize="20"
+                   FontSize="18"
                    Background="lightgray"
-                   Margin="0,10,0,0"/>
+                   Margin="0,10,0,0"
+                   Padding="5"/>
                 <!--Krankmelden-->
                 <Button x:Name="btn_krankmelden" 
                     Clicked="btn_krankmelden_Clicked"

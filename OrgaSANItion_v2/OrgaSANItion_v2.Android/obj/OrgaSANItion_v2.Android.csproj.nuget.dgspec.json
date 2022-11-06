@@ -1,21 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.Android\\OrgaSANItion_v2.Android.csproj": {}
+    "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.Android\\OrgaSANItion_v2.Android.csproj": {}
   },
   "projects": {
-    "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.Android\\OrgaSANItion_v2.Android.csproj": {
+    "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.Android\\OrgaSANItion_v2.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.Android\\OrgaSANItion_v2.Android.csproj",
+        "projectUniqueName": "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.Android\\OrgaSANItion_v2.Android.csproj",
         "projectName": "OrgaSANItion_v2.Android",
-        "projectPath": "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.Android\\OrgaSANItion_v2.Android.csproj",
-        "packagesPath": "C:\\Users\\boyxe\\.nuget\\packages\\",
-        "outputPath": "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.Android\\obj\\",
+        "projectPath": "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.Android\\OrgaSANItion_v2.Android.csproj",
+        "packagesPath": "C:\\Users\\Henry\\.nuget\\packages\\",
+        "outputPath": "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\boyxe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Henry\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
         "frameworks": {
           "monoandroid12.0": {
             "projectReferences": {
-              "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj": {
-                "projectPath": "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj"
+              "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj": {
+                "projectPath": "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj"
               }
             }
           }
@@ -50,17 +50,17 @@
         }
       }
     },
-    "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj": {
+    "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj",
+        "projectUniqueName": "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj",
         "projectName": "OrgaSANItion_v2",
-        "projectPath": "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj",
-        "packagesPath": "C:\\Users\\boyxe\\.nuget\\packages\\",
-        "outputPath": "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\obj\\",
+        "projectPath": "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj",
+        "packagesPath": "C:\\Users\\Henry\\.nuget\\packages\\",
+        "outputPath": "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\boyxe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Henry\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -111,7 +111,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

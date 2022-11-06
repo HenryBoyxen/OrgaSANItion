@@ -982,20 +982,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\boyxe\\.nuget\\packages\\": {}
+    "C:\\Users\\Henry\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.iOS\\OrgaSANItion_v2.iOS.csproj",
+      "projectUniqueName": "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.iOS\\OrgaSANItion_v2.iOS.csproj",
       "projectName": "OrgaSANItion_v2.iOS",
-      "projectPath": "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.iOS\\OrgaSANItion_v2.iOS.csproj",
-      "packagesPath": "C:\\Users\\boyxe\\.nuget\\packages\\",
-      "outputPath": "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.iOS\\obj\\",
+      "projectPath": "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.iOS\\OrgaSANItion_v2.iOS.csproj",
+      "packagesPath": "C:\\Users\\Henry\\.nuget\\packages\\",
+      "outputPath": "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\boyxe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Henry\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1008,8 +1008,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj": {
-              "projectPath": "C:\\Programmieren\\GitHub\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj"
+            "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj": {
+              "projectPath": "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj"
             }
           }
         }
