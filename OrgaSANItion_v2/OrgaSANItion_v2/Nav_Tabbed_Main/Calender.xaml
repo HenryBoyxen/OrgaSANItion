@@ -15,7 +15,8 @@
                    HorizontalOptions="Center"
                    Margin="0,30,0,0"/>
             <DatePicker x:Name="datepicker"
-                        HorizontalOptions="CenterAndExpand"/>
+                        HorizontalOptions="CenterAndExpand"
+                        DateSelected="datepicker_DateSelected"/>
             <!--Display Sanis-->
             <Label Text="Sanis:"
                    FontSize="20"

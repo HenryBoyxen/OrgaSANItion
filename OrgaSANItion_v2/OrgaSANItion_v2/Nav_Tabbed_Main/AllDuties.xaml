@@ -4,52 +4,54 @@
              x:Class="OrgaSANItion_v2.Nav_Tabbed_Main.AllDuties"
              BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout Margin="25,35">
-            <Label Text="Alle deine Dienste"
-                VerticalOptions="Start" 
-                HorizontalOptions="CenterAndExpand"
-                FontSize="40"/>
-            <!--Display all duties-->
-            <Grid Margin="0,40,0,0">
-                <Grid.Resources>
-                    <ResourceDictionary>
-                        <Style TargetType="Label">
-                            <Setter Property="FontSize" Value="18"/>
-                            <Setter Property="HorizontalTextAlignment" Value="Center"/>
-                        </Style>
-                    </ResourceDictionary>
-                </Grid.Resources>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="60"/>
-                </Grid.RowDefinitions>
-                <Label Text="Datum"
-                       Grid.Column="0"
-                       FontSize="22"/>
-                <Label Text="Funktion"
-                       Grid.Column="1"
-                       FontSize="22"/>
-                <!--
-                <Label Text="03.11.2022"
-                       Grid.Row="1"/>
-                <Label Text="Sanitäter"
-                       Grid.Row="1"
-                       Grid.Column="1"/>
-                <Label Text="03.11.2022"
-                       Grid.Row="2"/>
-                <Label Text="Sanitäter"
-                       Grid.Row="2"
-                       Grid.Column="1"/>
-                <Label Text="03.11.2022"
-                       Grid.Row="3"/>
-                <Label Text="Sanitäter"
-                       Grid.Row="3"
-                       Grid.Column="1"/>
-                -->
-            </Grid>
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Margin="25,35">
+                <Label Text="Alle deine Dienste"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="CenterAndExpand"
+                    FontSize="40"/>
+                <!--Display all duties-->
+                <Grid Margin="0,40,0,0" x:Name="grid_main">
+                    <Grid.Resources>
+                        <ResourceDictionary>
+                            <Style TargetType="Label">
+                                <Setter Property="FontSize" Value="18"/>
+                                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                            </Style>
+                        </ResourceDictionary>
+                    </Grid.Resources>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                    </Grid.RowDefinitions>
+                    <Label Text="Datum"
+                           Grid.Column="0"
+                           FontSize="22"/>
+                    <Label Text="Funktion"
+                           Grid.Column="1"
+                           FontSize="22"/>
+                    <!--
+                    <Label Text="03.11.2022"
+                           Grid.Row="1"/>
+                    <Label Text="Sanitäter"
+                           Grid.Row="1"
+                           Grid.Column="1"/>
+                    <Label Text="03.11.2022"
+                           Grid.Row="2"/>
+                    <Label Text="Sanitäter"
+                           Grid.Row="2"
+                           Grid.Column="1"/>
+                    <Label Text="03.11.2022"
+                           Grid.Row="3"/>
+                    <Label Text="Sanitäter"
+                           Grid.Row="3"
+                           Grid.Column="1"/>
+                    -->
+                </Grid>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

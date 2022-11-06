@@ -5,6 +5,7 @@ using System.Net.Sockets;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Diagnostics;
 
 namespace OrgaSANItion_v2.Classes
 {
@@ -69,10 +70,10 @@ namespace OrgaSANItion_v2.Classes
             return sqlPassword;
         }
 
-        public static string[] HomePage_initializeTextblocks()
+        public static string[] GetSanisAndSpringerFromDate(DateTime dateTime)
         {
             string[] array = new string[4];
-
+            string date = dateTime.ToShortDateString();
             try
             {
                 using (TcpClient tcpClient = new TcpClient(Hostname, Port))
@@ -83,7 +84,13 @@ namespace OrgaSANItion_v2.Classes
                     sw.AutoFlush = true;
 
                     //Send request
-                    sw.Write("HomePage_initializeTextblocks");
+                    sw.Write("GetSanisAndSpringerFromDate");
+
+                    //Wait for the server to be ready
+                    ReadStreamString(stream);
+
+                    //Send date
+                    sw.Write(date);
 
                     //Get answer
                     IFormatter formatter = new BinaryFormatter();
@@ -98,9 +105,10 @@ namespace OrgaSANItion_v2.Classes
             return array;
         }
 
-        public static string Homepage_initializeNextDuty()
+        public static string[] Homepage_initializeNextDuty()
         {
-            string date;
+            string[] dateAndFunction = new string[2];
+            
             try
             {
                 using (TcpClient tcpClient = new TcpClient(Hostname, Port))
@@ -119,15 +127,51 @@ namespace OrgaSANItion_v2.Classes
                     //Send username
                     sw.Write(Variables.GetUsername());
 
-                    //Get answer
-                    date = ReadStreamString(stream);
+                    //Get date
+                    dateAndFunction[0] = ReadStreamString(stream);
+
+                    //Get function
+                    dateAndFunction[1] = ReadStreamWithApproval(stream, sw);
                 }
             }
             catch
             {
                 return null;
             }
-            return date;
+            return dateAndFunction;
+        }
+
+        public static Queue<string> AllDuties_initializeAllDuties()
+        {
+            Queue<string> queue = new Queue<string>();
+            try
+            {
+                using (TcpClient tcpClient = new TcpClient(Hostname, Port))
+                {
+                    NetworkStream stream = tcpClient.GetStream();
+                    StreamReader sr = new StreamReader(stream);
+                    StreamWriter sw = new StreamWriter(stream);
+                    sw.AutoFlush = true;
+
+                    //Send request
+                    sw.Write("Calender_initializeAllDuties");
+
+                    //Wait for server to be ready
+                    ReadStreamString(stream);
+
+                    //Send username
+                    sw.Write(Variables.GetUsername());
+
+                    //Get answer
+                    IFormatter formatter = new BinaryFormatter();
+                    queue = (Queue<string>)formatter.Deserialize(stream);
+                }
+            }
+            catch
+            {
+                return null;
+            }
+            return queue;
         }
     }
 }
