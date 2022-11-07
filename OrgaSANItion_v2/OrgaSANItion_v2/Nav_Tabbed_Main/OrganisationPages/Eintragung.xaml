@@ -12,7 +12,8 @@
             <!--Erklärung-->
             <Label HorizontalTextAlignment="Center"
                    FontSize="18"
-                   Margin="0,20,0,0">
+                   Margin="0,20,0,0"
+                   x:Name="txtblock_feedback">
                 Klicke die Felder an, an denen du die Aufgabe des Sanitäters oder Springers übernehmen kannst.
             </Label>
             <!--Checkboxes-->
@@ -104,7 +105,9 @@
                           HorizontalOptions="Center"/>
             </Grid>
             <Button Text="Übernehmen"
-                    Margin="0,30,0,0"/>
+                    Margin="0,30,0,0"
+                    x:Name="btn_übernehmen"
+                    Clicked="btn_übernehmen_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

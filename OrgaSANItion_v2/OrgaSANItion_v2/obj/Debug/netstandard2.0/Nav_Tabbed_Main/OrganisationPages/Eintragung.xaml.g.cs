@@ -17,6 +17,9 @@ namespace OrgaSANItion_v2.Nav_Tabbed_Main.OrganisationPages {
     public partial class Eintragung : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Label txtblock_feedback;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.CheckBox checkbox_sani_montag;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -47,8 +50,12 @@ namespace OrgaSANItion_v2.Nav_Tabbed_Main.OrganisationPages {
         private global::Xamarin.Forms.CheckBox checkbox_springer_freitag;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Button btn_übernehmen;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Eintragung));
+            txtblock_feedback = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "txtblock_feedback");
             checkbox_sani_montag = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CheckBox>(this, "checkbox_sani_montag");
             checkbox_springer_montag = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CheckBox>(this, "checkbox_springer_montag");
             checkbox_sani_dienstag = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CheckBox>(this, "checkbox_sani_dienstag");
@@ -59,6 +66,7 @@ namespace OrgaSANItion_v2.Nav_Tabbed_Main.OrganisationPages {
             checkbox_springer_donnerstag = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CheckBox>(this, "checkbox_springer_donnerstag");
             checkbox_sani_freitag = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CheckBox>(this, "checkbox_sani_freitag");
             checkbox_springer_freitag = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CheckBox>(this, "checkbox_springer_freitag");
+            btn_übernehmen = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btn_übernehmen");
         }
     }
 }

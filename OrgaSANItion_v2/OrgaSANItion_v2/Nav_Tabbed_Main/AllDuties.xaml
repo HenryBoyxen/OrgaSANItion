@@ -5,7 +5,7 @@
              BackgroundColor="White">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Margin="25,35">
+            <StackLayout Margin="25,35" x:Name="stacklayout_main">
                 <Label Text="Alle deine Dienste"
                     VerticalOptions="Start" 
                     HorizontalOptions="CenterAndExpand"
@@ -27,29 +27,6 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="60"/>
                     </Grid.RowDefinitions>
-                    <Label Text="Datum"
-                           Grid.Column="0"
-                           FontSize="22"/>
-                    <Label Text="Funktion"
-                           Grid.Column="1"
-                           FontSize="22"/>
-                    <!--
-                    <Label Text="03.11.2022"
-                           Grid.Row="1"/>
-                    <Label Text="Sanitäter"
-                           Grid.Row="1"
-                           Grid.Column="1"/>
-                    <Label Text="03.11.2022"
-                           Grid.Row="2"/>
-                    <Label Text="Sanitäter"
-                           Grid.Row="2"
-                           Grid.Column="1"/>
-                    <Label Text="03.11.2022"
-                           Grid.Row="3"/>
-                    <Label Text="Sanitäter"
-                           Grid.Row="3"
-                           Grid.Column="1"/>
-                    -->
                 </Grid>
             </StackLayout>
         </ScrollView>

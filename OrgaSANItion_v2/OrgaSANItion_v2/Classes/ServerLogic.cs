@@ -173,5 +173,78 @@ namespace OrgaSANItion_v2.Classes
             }
             return queue;
         }
+
+        public static string[] Eintragung_initializeCheckboxes()
+        {
+            string[] array = new string[10];
+            try
+            {
+                using (TcpClient tcpClient = new TcpClient(Hostname, Port))
+                {
+                    NetworkStream stream = tcpClient.GetStream();
+                    StreamReader sr = new StreamReader(stream);
+                    StreamWriter sw = new StreamWriter(stream);
+                    sw.AutoFlush = true;
+
+                    //Send request
+                    sw.Write("Eintragung_initializeCheckboxes");
+
+                    //Wait for server to be ready
+                    ReadStreamString(stream);
+
+                    //Send Username
+                    sw.Write(Variables.GetUsername());
+
+                    //Get array
+                    IFormatter formatter = new BinaryFormatter();
+                    array = (string[])formatter.Deserialize(stream);
+                }
+            }
+            catch
+            {
+                return null;
+            }
+            return array;
+        }
+
+        public static bool Eintragung_eintragung(string[] array)
+        {
+            try
+            {
+                using (TcpClient tcpClient = new TcpClient(Hostname, Port))
+                {
+                    NetworkStream stream = tcpClient.GetStream();
+                    StreamReader sr = new StreamReader(stream);
+                    StreamWriter sw = new StreamWriter(stream);
+                    sw.AutoFlush = true;
+
+                    //Send request
+                    sw.Write("Eintragung_eintragung");
+
+                    //Wait for server to be ready
+                    ReadStreamString(stream);
+
+                    //Send Username
+                    sw.Write(Variables.GetUsername());
+
+                    //Wait for server to be ready
+                    ReadStreamString(stream);
+
+                    //Send array
+                    IFormatter formatter = new BinaryFormatter();
+                    formatter.Serialize(stream, array);
+
+                    //Confirmation of receipt
+                    string confirmation = ReadStreamString(stream);
+                    if (confirmation != "true")
+                        throw new Exception("No confirmation");
+                }
+            }
+            catch
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }

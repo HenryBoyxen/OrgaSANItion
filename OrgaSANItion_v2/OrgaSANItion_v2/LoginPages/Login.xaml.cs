@@ -55,7 +55,7 @@ namespace OrgaSANItion_v2.LoginPages
                 txtblock_feedback.Text = "Das Passwort ist falsch";
                 return;
             }
-            Variables.SetUsername("123");
+            Variables.SetUsername(entry_username.Text);
             Nav_Tabbed nav_Tabbed = new Nav_Tabbed();
             await Navigation.PushAsync(nav_Tabbed);
         }
