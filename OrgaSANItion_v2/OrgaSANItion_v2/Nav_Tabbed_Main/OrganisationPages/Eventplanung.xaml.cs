@@ -28,6 +28,7 @@ namespace OrgaSANItion_v2.Nav_Tabbed_Main.OrganisationPages
 
         private void DisplayEvents()
         {
+            /*
             Button button = CreateEventButton("Tag der Tür");
             Button button2 = CreateEventButton("Tag der Türen");
             Button button3 = CreateEventButton("Tag der Tür");
@@ -40,6 +41,7 @@ namespace OrgaSANItion_v2.Nav_Tabbed_Main.OrganisationPages
             stacklayout_main.Children.Add(button4);
             stacklayout_main.Children.Add(button5);
             stacklayout_main.Children.Add(button6);
+            */
         }
 
         private Button CreateEventButton(string eventName)
