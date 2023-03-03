@@ -28,26 +28,30 @@ namespace OrgaSANItion_v2.LoginPages
                 return;
             }
             //Get password fitting to username or "" if the username doesnt exist
-            string sqlPassword = ServerLogic.Login_anmelden_sqlPassword(entry_username.Text);
-
-            switch (sqlPassword)
+            string sqlPassword;
+            try
             {
-                case "unknown_error":
-                    txtblock_feedback.TextColor = Color.Red;
-                    txtblock_feedback.Text = "Es kam zu einem Fehler. Bitte versuche es erneut";
-                    return;
-                case "SocketException":
-                    txtblock_feedback.TextColor = Color.Red;
-                    txtblock_feedback.Text = "Es konnte keine Verbindung zum Server aufgebaut werden";
-                    return;
-                case "":
-                    txtblock_feedback.TextColor = Color.Red;
-                    txtblock_feedback.Text = "Der Benutzer existiert nicht";
-                    return;
-                default:
-                    break;
+                Client client = new Client();
+                client.WriteString("Anmelden_anmelden");
+                client.ReadString();
+                client.WriteString(entry_username.Text);
+                sqlPassword = client.ReadString();
+                client.Dispose();
             }
-
+            catch
+            {
+                txtblock_feedback.TextColor = Color.Red;
+                txtblock_feedback.Text = "Eine Verbindung zum Server ist nicht möglich";
+                return;
+            }
+            //return if there is no Password -> User doesnt exist
+            if(sqlPassword == "")
+            {
+                txtblock_feedback.TextColor = Color.Red;
+                txtblock_feedback.Text = "Der Benutzer existiert nicht";
+                return;
+            }
+            //Verify Password
             bool result = SecurePasswordHasher.Verify(entry_password.Text, sqlPassword);
             if (!result)
             {

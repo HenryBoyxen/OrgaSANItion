@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MktUTmGaoSzRCxDuZz5naPxD6ufsKMVdc7FlY4b8aHgPhr9hhLMwxS9hxY/etuDiYv1BY8yF/B9+QNaDosDWGQ==",
+  "dgSpecHash": "WNIZotgqaYTl3UnX7s5Nm63Ru7ZfZCtd2/BxyV+/KypPwA/QVnNJCvDLgzb9D+agv8d8ZHRDEM7hgpyCYSYpdQ==",
   "success": true,
-  "projectFilePath": "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2.iOS\\OrgaSANItion_v2.iOS.csproj",
+  "projectFilePath": "D:\\Github\\OrgaSANItion_test\\OrgaSANItion_v2\\OrgaSANItion_v2.iOS\\OrgaSANItion_v2.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Henry\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Henry\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",

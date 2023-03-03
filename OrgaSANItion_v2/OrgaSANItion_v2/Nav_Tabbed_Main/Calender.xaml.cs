@@ -20,7 +20,20 @@ namespace OrgaSANItion_v2.Nav_Tabbed_Main
         }
         private void InitializeTextblocks()
         {
-            string[] content = ServerLogic.GetSanisAndSpringerFromDate(DateTime.Now);
+            string[] content;
+            try
+            {
+                Client client = new Client();
+                client.WriteString("GetSanisAndSpringerFromDate");
+                client.ReadString();
+                client.WriteString(DateTime.Now.ToShortDateString());
+                content = (string[])client.ReadObject();
+                client.Dispose();
+            }
+            catch
+            {
+                return;
+            }
             SetContentOfTextblocks(content);
         }
 
@@ -53,7 +66,20 @@ namespace OrgaSANItion_v2.Nav_Tabbed_Main
 
         private void datepicker_DateSelected(object sender, DateChangedEventArgs e)
         {
-            string[] content = ServerLogic.GetSanisAndSpringerFromDate(datepicker.Date);
+            string[] content;
+            try
+            {
+                Client client = new Client();
+                client.WriteString("GetSanisAndSpringerFromDate");
+                client.ReadString();
+                client.WriteString(datepicker.Date.ToShortDateString());
+                content = (string[])client.ReadObject();
+                client.Dispose();
+            }
+            catch
+            {
+                return;
+            }
             SetContentOfTextblocks(content);
         }
     }

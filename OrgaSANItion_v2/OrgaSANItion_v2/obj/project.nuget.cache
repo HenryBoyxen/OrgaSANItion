@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gyYJ86pAeENiaIjnJvQF9ruyfWE2Doox+Eu7b2aY4GjUQOCo2imWqyr7b5Ka8/jEXIIlfqR7/qH+Y6uJdfs/oA==",
+  "dgSpecHash": "PkBbnniN4QLizazGgoya6Z8OH+vt+s++iNdLz5MFAKN9vAQGnUthf3kNHI0pdLGVwTHO+Nht3uySV+HmOXpYzQ==",
   "success": true,
-  "projectFilePath": "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj",
+  "projectFilePath": "D:\\Github\\OrgaSANItion_test\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Henry\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\Henry\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

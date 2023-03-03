@@ -20,8 +20,22 @@ namespace OrgaSANItion_v2.Nav_Tabbed_Main
         }
         private void InitializeAllDuties()
         {
-            Queue<string> queue = ServerLogic.AllDuties_initializeAllDuties();
-            if(queue.Count == 0)
+            Queue<string> queue;
+            try
+            {
+                Client client = new Client();
+                client.WriteString("Calender_initializeAllDuties");
+                client.ReadString();
+                client.WriteString(Variables.GetUsername());
+                queue = (Queue<string>)client.ReadObject();
+                client.Dispose();
+            }
+            catch
+            {
+                return;
+            }
+
+            if (queue.Count == 0)
             {
                 Label label = new Label()
                 {

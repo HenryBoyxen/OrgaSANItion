@@ -530,11 +530,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj",
+      "projectUniqueName": "D:\\Github\\OrgaSANItion_test\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj",
       "projectName": "OrgaSANItion_v2",
-      "projectPath": "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj",
+      "projectPath": "D:\\Github\\OrgaSANItion_test\\OrgaSANItion_v2\\OrgaSANItion_v2\\OrgaSANItion_v2.csproj",
       "packagesPath": "C:\\Users\\Henry\\.nuget\\packages\\",
-      "outputPath": "D:\\Github\\OrgaSANItion\\OrgaSANItion_v2\\OrgaSANItion_v2\\obj\\",
+      "outputPath": "D:\\Github\\OrgaSANItion_test\\OrgaSANItion_v2\\OrgaSANItion_v2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Henry\\AppData\\Roaming\\NuGet\\NuGet.Config",

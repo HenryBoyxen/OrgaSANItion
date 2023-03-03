@@ -24,7 +24,21 @@ namespace OrgaSANItion_v2.Nav_Tabbed_Main
         private void InitializeTextblocks()
         {
             //initialize Heutige Sanis & Springer
-            string[] content = ServerLogic.GetSanisAndSpringerFromDate(DateTime.Now);
+            string[] content;
+            try
+            {
+                Client client = new Client();
+                client.WriteString("GetSanisAndSpringerFromDate");
+                client.ReadString();
+                client.WriteString(DateTime.Now.ToShortDateString());
+                content = (string[])client.ReadObject();
+                client.Dispose();
+            }
+            catch
+            {
+                return;
+            }
+
             if (content == null)
                 return;
             if (content[0] != "null")
@@ -43,8 +57,25 @@ namespace OrgaSANItion_v2.Nav_Tabbed_Main
                 txt_block_springer2.Text = content[3];
             else
                 txt_block_springer2.Text = "Heute ist kein 2. Springer eingeteilt";
+            
             //initialize Dein nächster Dienst
-            string[] dateAndFunction = ServerLogic.Homepage_initializeNextDuty();
+            string[] dateAndFunction = new string[2];
+            try
+            {
+                Client client = new Client();
+                client.WriteString("HomePage_initializeNextDuty");
+                client.ReadString();
+                client.WriteString(Variables.GetUsername());
+                dateAndFunction[0] = client.ReadString();
+                client.WriteString("next");
+                dateAndFunction[1] = client.ReadString();
+                client.Dispose();
+            }
+            catch
+            {
+                return;
+            }
+
             if (dateAndFunction[0] != "null")
                 txt_block_nächsterdienst.Text = dateAndFunction[0] + " als " + dateAndFunction[1];
             else

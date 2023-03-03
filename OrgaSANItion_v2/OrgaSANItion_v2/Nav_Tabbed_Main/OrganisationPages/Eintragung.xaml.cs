@@ -21,7 +21,22 @@ namespace OrgaSANItion_v2.Nav_Tabbed_Main.OrganisationPages
 
         private void InitializeCheckboxes()
         {
-            string[] array = ServerLogic.Eintragung_initializeCheckboxes();
+            string[] array;
+            try
+            {
+                Client client = new Client();
+                client.WriteString("Eintragung_initializeCheckboxes");
+                client.ReadString();
+                client.WriteString(Variables.GetUsername());
+                array = (string[])client.ReadObject();
+                client.Dispose();
+            }
+            catch
+            {
+                return;
+            }
+            
+
             if(array == null)
             {
                 txtblock_feedback.TextColor = Color.Red;
@@ -53,8 +68,25 @@ namespace OrgaSANItion_v2.Nav_Tabbed_Main.OrganisationPages
             array[7] = checkbox_springer_mittwoch.IsChecked ? "true" : "false";
             array[8] = checkbox_springer_donnerstag.IsChecked ? "true" : "false";
             array[9] = checkbox_springer_freitag.IsChecked ? "true" : "false";
-            bool confirmation = ServerLogic.Eintragung_eintragung(array);
-            if (confirmation)
+
+            string response;
+            try
+            {
+                Client client = new Client();
+                client.WriteString("Eintragung_eintragung");
+                client.ReadString();
+                client.WriteString(Variables.GetUsername());
+                client.ReadString();
+                client.WriteObject(array);
+                response = client.ReadString();
+                client.Dispose();
+            }
+            catch
+            {
+                return;
+            }
+
+            if (response == "true")
             {
                 txtblock_feedback.TextColor = Color.Green;
                 txtblock_feedback.Text = "Deine Änderungen wurden erfolgreich gespeichert";
