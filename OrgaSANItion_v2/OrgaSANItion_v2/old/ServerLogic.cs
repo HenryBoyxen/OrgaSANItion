@@ -8,7 +8,7 @@
 //using System.Runtime.Serialization.Formatters.Binary;
 //using System.Diagnostics;
 
-//namespace OrgaSANItion_v2.Classes
+//namespace OrgaSANItion_v2.old
 //{
 //    public static class ServerLogic
 //    {
@@ -109,7 +109,7 @@
 //        public static string[] Homepage_initializeNextDuty()
 //        {
 //            string[] dateAndFunction = new string[2];
-            
+
 //            try
 //            {
 //                using (TcpClient tcpClient = new TcpClient(Hostname, Port))
@@ -249,4 +249,3 @@
 //        }
 //    }
 //}
-//*/
